@@ -1,13 +1,22 @@
 import React, { Component } from 'react';
-import Message from './message'
+import Item from './item'
 import './index.css'
 
 export default class Content extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      inputValue: ''
+    }
+  }
   render() {
+    const {content} = this.props
+    debugger
     return (
       <div className="content">
-      <Message />
-      <Message />
+      {
+        content.map((item, index) => <Item key={index} type={item.type} message={item.message} />)
+      }
       </div>
     )
   }
