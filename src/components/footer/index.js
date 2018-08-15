@@ -8,13 +8,15 @@ export default class Footer extends Component {
     this.state = {
       inputValue: ''
     }
-    this.onValueChange = this.onValueChange.bind(this);
-    this.handleKeyPress = this.handleKeyPress.bind(this);
-    this.submitUserMessage = this.submitUserMessage.bind(this);
+    this.onValueChange = this.onValueChange.bind(this)
+    this.handleKeyPress = this.handleKeyPress.bind(this)
+    this.submitUserMessage = this.submitUserMessage.bind(this)
+    this.onClick=this.onClick.bind(this)
   }
 
   onClick() {
     console.log(111)
+    this.submitUserMessage()
   }
   onValueChange(event) {
     this.setState({ inputValue: event.target.value });
