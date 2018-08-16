@@ -7,7 +7,7 @@ export default class Message extends Component {
   render() {
     const {type = 'left', message} = this.props
     return (
-        <div className={cx({'message-left': type === 'left', 'message-right': type === 'right'})}>
+        <div className={cx({'message-left': type === 'left', 'message-right': type === 'right', 'message-middle': type === 'middle'})}>
             {message}
         </div>
     )

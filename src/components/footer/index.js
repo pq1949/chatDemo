@@ -15,7 +15,6 @@ export default class Footer extends Component {
   }
 
   onClick() {
-    console.log(111)
     this.submitUserMessage()
   }
   onValueChange(event) {
@@ -24,14 +23,11 @@ export default class Footer extends Component {
   handleKeyPress(event) {
     if (event.key === 'Enter') {
       this.submitUserMessage()
-      console.log(222)
     }
   }
   submitUserMessage() {
-    console.log(333)
     const {inputValue} = this.state
     if (inputValue === '') return
-    console.log(444)
     this.props.sendMessage && this.props.sendMessage(inputValue)
     this.setState({
       inputValue:''

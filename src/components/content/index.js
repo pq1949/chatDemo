@@ -9,9 +9,8 @@ export default class Content extends Component {
     this.state = {
       inputValue: ''
     }
-    this.update = this.update.bind(this)
   }
-  update() {
+  scroolToBottom() {
     setTimeout(() => {
       this.refs.scrollbars && this.refs.scrollbars.scrollToBottom()
     },0)
@@ -23,7 +22,6 @@ export default class Content extends Component {
       <Scrollbars
       ref='scrollbars'
       autoHide
-      onUpdate={this.update}
       autoHideTimeout={1000}
       autoHideDuration={200}>
       {

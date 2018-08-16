@@ -1,14 +1,4 @@
 .content {
   background: #f5f8fb;
   height: calc(100% - 56px - 52px);
-
-  .message {
-    display: inline-block;
-    .avatar {
-      display: inline-block;
-    }
-    .content {
-      display: inline-block;
-    }
-  }
 }

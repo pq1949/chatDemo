@@ -15,6 +15,10 @@ export default class Item extends Component {
                 <Message type={type} message={message} />
                 <Avatar type={type} avatar={avatar} />
             </div>
+    } else if (type === 'middle') {
+      item = <div className='item-middle'>
+              <Message type={type} message={message} />
+           </div>
     }
     return item
   }
