@@ -37,7 +37,7 @@ app.all('*', function(req, res, next) {
 
 app.get('/init', function (req, res) {
   // res.send('<h1>Hello world</h1>');
-  mysqlClient.query(`SELECT * FROM messages order by customer_id asc limit 100; `, function (error, results, fields) {
+  mysqlClient.query(`SELECT * FROM messages order by customer_id desc limit 100; `, function (error, results, fields) {
     if (error) {
       console.log(error)
       res.send({
@@ -47,7 +47,7 @@ app.get('/init', function (req, res) {
     } else {
       res.send({
         error: false,
-        items: results
+        items: results.sort((a,b) => Number(a.customer_id) - Number(b.customer_id))
       })
     }
     console.log('results.length ' + results.length)
