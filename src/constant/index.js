@@ -4,7 +4,7 @@ export const AVATAR = {
 }
 
 export const SERVER = {
-  // ip: '140.143.99.193',
-  ip: '127.0.0.1',
+  ip: '140.143.99.193',
+  // ip: '127.0.0.1',
   port: '3001'
 }
